@@ -9,7 +9,7 @@ const Form = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "YOUR_ACCESS_KEY_IS_WRITTEN_HERE");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -33,7 +33,7 @@ const Form = () => {
             style={{ background: `url(${school1.src}) center/cover fixed` }}
             className="bgContactSection  w-full min-h-screen bg-no-repeat flex p-2 items-center justify-center">
 
-            <form onSubmit={handleSubmit} className="mx-auto max-w-2xl w-full p-5 glass rounded-2xl">
+            <form className="mx-auto max-w-2xl w-full p-5 glass rounded-2xl">
                 <Link href="/">
                     <Image src={logo} alt="logo" className='w-20 mx-auto' />
                 </Link>

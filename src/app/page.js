@@ -14,6 +14,28 @@ import Faq from "@/Components/Faq";
 
 
 export default function Home() {
+  const handleSubmit  = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+    }
+}
   return (
     <div className="">
       <Header />
@@ -60,9 +82,9 @@ export default function Home() {
           </div>
           <div className="md:max-w-[50%] w-full">
             <form className="bg-white rounded-lg p-5 grid md:grid-cols-2 grid-cols-1 gap-5 max-w-[30rem] w-full mx-auto md:py-8">
-              <input type="text" placeholder="Name, Lastname *" required className="py-3 border-b border-zinc-300 focus:border-zinc-400" />
-              <input type="number" placeholder="Mobile Phone *" required className="py-3 border-b border-zinc-300 focus:border-zinc-400" />
-              <input type="email" placeholder="Email Address *" required className="py-3 border-b border-zinc-300 focus:border-zinc-400" />
+              <input type="text" placeholder="Name, Lastname *" name="name" required className="py-3 border-b border-zinc-300 focus:border-zinc-400" />
+              <input type="number" placeholder="Mobile Phone *" required name="phone" className="py-3 border-b border-zinc-300 focus:border-zinc-400" />
+              <input type="email" placeholder="Email Address *" required name="email" className="py-3 border-b border-zinc-300 focus:border-zinc-400" />
               <select name="course" id="course" className="py-3 text-zinc-500 border-b border-zinc-300 focus:border-zinc-400">
                 <option value="Select Course " className="">Choose Your Service</option>
                 <option value="Select Course " className="">Technical Support</option>
