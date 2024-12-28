@@ -49,7 +49,7 @@ const Navbar = () => {
                         <ul className='md:hidden border border-t-0 w-full max-w-[95%] mx-auto flex-col flex items-center bg-white text-[#555555] font-medium'>
                             <li className='w-full text-center'><Link className='transition-all border-b w-full p-4 block  duration-500 hover:text-black' href="/">Home</Link></li>
                             <li className='w-full text-center'><Link className='transition-all border-b w-full p-4 block  duration-500 hover:text-black' href="/">About Us</Link></li>
-                            <li className='w-full text-center'><Link className='transition-all border-b w-full p-4 block  duration-500 hover:text-black' href="/">Download Form</Link></li>
+                            <li className='w-full text-center'><Link className='transition-all border-b w-full p-4 block  duration-500 hover:text-black' href="/form">Download Form</Link></li>
                             <li className='w-full text-center'><Link className='transition-all border-b w-full p-4 block  duration-500 hover:text-black' href="/">Services</Link></li>
                             <li className='w-full text-center'><Link className='transition-all p-4 block  duration-500 hover:text-black' href="/">Contact</Link></li>
                         </ul>
