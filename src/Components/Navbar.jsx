@@ -19,7 +19,7 @@ const Navbar = () => {
                         <Image src={logo} alt="logo" className='md:w-20 w-14' />
                     </Link>
                     {/* links */}
-                    <ul className='md:flex hidden items-center gap-7 text-zinc-700 font-medium'>
+                    <ul className='md:flex hidden items-center gap-7 text-zinc-700 uppercase font-medium'>
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">Home</Link></li>/
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">About Us</Link></li>/
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">Download Form</Link></li>/
@@ -27,6 +27,21 @@ const Navbar = () => {
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">Contact</Link></li>
                     </ul>
                     <GrSearch onClick={() => setIsOpen(!isOpen)} className='text-zinc-700 text-xl transition-all duration-500 hover:text-black cursor-pointer' />
+
+                    {/* search */}
+
+                    {
+                        isOpen && (
+                            <div className="bg-white p-2 rounded-lg max-w-[17.8rem] fadeIn absolute md:top-16 top-14 md:right-5 right-2 z-10">
+                                <div className=" flex items-center">
+                                    <input type="text" placeholder='Enter Your Search...' className='p-3 border-r-0 rounded-l-lg focus:border-zinc-300 border' />
+                                    <div className="w-12 h-12 rounded-r-lg flex items-center bg-[#41c4ff]  justify-center">
+                                        <GrSearch className='text-white text-xl transition-all duration-500 cursor-pointer' />
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
 
                     {/* responsive Navbar */}
 
@@ -42,18 +57,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {
-                isOpen && (
-                    <div className="bg-white p-2 rounded-lg max-w-[17.8rem] fadeIn absolute md:top-32 top-40 md:right-20 right-5 z-10">
-                        <div className=" flex items-center">
-                            <input type="text" placeholder='Enter Your Search...' className='p-3 border-r-0 rounded-l-lg focus:border-zinc-300 border' />
-                            <div className="w-12 h-12 rounded-r-lg flex items-center bg-[#41c4ff]  justify-center">
-                                <GrSearch className='text-white text-xl transition-all duration-500 cursor-pointer' />
-                            </div>
-                        </div>
-                    </div>
-                )
-            }
+
         </>
     )
 }

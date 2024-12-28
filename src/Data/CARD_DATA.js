@@ -12,6 +12,11 @@ import school4 from "../../public/Assets/Home/school4.jpg"
 import school5 from "../../public/Assets/Home/school5.jpg"
 import school6 from "../../public/Assets/Home/school6.jpg"
 
+import report from "../../public/Assets/Home/report.svg"
+import customer from "../../public/Assets/Home/customer.svg"
+import commissions from "../../public/Assets/Home/commissions.svg"
+
+
 
 export const CARD_DATA = [
     {
@@ -84,3 +89,25 @@ export const SCHOOL_VIEW = [
         para:"Sustainable livestock management for profitable agricultural practices"
     },
 ] 
+
+
+export const wyChooseUs = [
+    {
+        id: 1,
+        img: report,
+        heading: "Quality Education and Training",
+        para: "Ofada Technical School offers specialized programs with experienced instructors, ensuring the students gain necessary skills and knowledge relevant to chosen fields"
+    },
+    {
+        id: 2,
+        img: customer,
+        heading: "Career Opportunities",
+        para: "Graduating from Ofada Technical School will enhance your resume, making it more attractive to employers"
+    },
+    {
+        id: 3,
+        img: commissions,
+        heading: "Cost Effectiveness",
+        para: "We provide more affordable alternative to traditional three-year colleges."
+    }
+]

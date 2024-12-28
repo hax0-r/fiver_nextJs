@@ -3,7 +3,14 @@ import Header from "@/Components/Header";
 import Navbar from "@/Components/Navbar";
 import SchoolView from "@/Components/SchoolView";
 import Slider from "@/Components/Slider";
-import { CARD_DATA } from "@/Data/CARD_DATA";
+import bgBlue from "../../public/Assets/Home/bgBlue.jpg";
+import bgContact from "../../public/Assets/Home/slider1.jpg";
+import faq from "../../public/Assets/Home/faq.jpg";
+import { CARD_DATA, wyChooseUs } from "@/Data/CARD_DATA";
+import ScrollToTop from "@/Components/ScrollToTop";
+import Footer from "@/Components/Footer";
+import Image from "next/image";
+import Faq from "@/Components/Faq";
 
 
 export default function Home() {
@@ -12,6 +19,8 @@ export default function Home() {
       <Header />
       <Navbar />
       <Slider />
+      <ScrollToTop />
+
       <div className="bg-[#333333] p-5 md:py-12 w-full py-8">
         <div className="flex items-center text-center justify-between md:flex-row flex-col gap-4 max-w-7xl w-full mx-auto">
           <h2 className="uppercase text-white font-bold text-2xl">OUR SCHOOL</h2>
@@ -35,7 +44,9 @@ export default function Home() {
 
 
 
-      <div className="bgContactSection md:py-16 py-8 w-full mt-10">
+      <div
+        style={{ background: `linear-gradient(#0a364fc6,#0a364fc6),url(${bgContact.src}) center/cover fixed` }}
+        className="bgContactSection md:py-20 py-8 w-full mt-10">
         <div className="max-w-7xl w-full mx-auto gap-5 flex items-center md:flex-row flex-col px-4 justify-center">
           <div className="md:max-w-[50%] w-full">
             <h2 className="font-bold text-[1.7rem] text-white md:text-[2.5rem] md:pt-16 pt-12 ">CONTACT US</h2>
@@ -79,6 +90,49 @@ export default function Home() {
       <div className="flex justify-center my-7">
         <button className="hover:bg-black  font-medium px-10 py-4 cursor-pointer transition-all duration-500 bg-[#41c4ff] text-white   rounded-lg uppercase">VIEW MORE</button>
       </div>
+
+
+
+
+      <div
+        style={{ background: `linear-gradient(#0a364fc6,#0a364fc6),url(${faq.src}) center/cover fixed` }}
+        className="bgContactSection md:pt-20 relative pt-8 w-full mt-10">
+          <div className="h-40 w-full absolute bg-white bottom-0 left-0"></div>
+        <h2 className="font-bold text-[1.7rem] text-white md:text-[2.5rem] text-center md:pt-16 pt-12 ">Faq’s</h2>
+        <div className="w-10 mt-2 h-1 rounded-full bg-zinc-300 mx-auto"></div>
+        <p className="mt-6 text-zinc-300 text-center">
+          Here are the common FAQs</p>
+        <div className="max-w-7xl w-full mx-auto md:mt-14 mt-8 grid md:grid-cols-2 z-10 relative grid-cols-1 px-4 justify-center">
+          <div className="">
+            <Image src={faq} className="w-full " />
+          </div>
+          <div className=" bg-white h-full flex items-center justify-center">
+            <Faq />
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <h2 className="font-bold text-[1.7rem] px-4 md:text-[2.5rem] md:pt-20 pt-12 text-center">Why choose us?</h2>
+      <div className="w-10 mt-3 h-1 rounded-full bg-zinc-400 mx-auto"></div>
+      <div className="md:pt-16 max-w-7xl w-full mx-auto p-4 pt-8 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 md:gap-14 ">
+        {
+          wyChooseUs.map((data, index) => (
+            <Card key={index} img={data.img} heading={data.heading} para={data.para} />
+          ))
+        }
+      </div>
+
+      <div style={{ background: `linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3)),url(${bgBlue.src}) center/cover` }} className=" bg-no-repeat w-full md:mt-16 mt-8">
+        <h2 className="text-center font-bold md:text-5xl text-3xl px-4 !leading-tight md:py-16 py-10">Technical Education in 2024</h2>
+      </div>
+
+      <Footer />
+
     </div>
   );
 }
