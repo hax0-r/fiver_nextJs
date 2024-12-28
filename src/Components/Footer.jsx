@@ -34,7 +34,7 @@ const Footer = () => {
                     <ul className="pt-5 space-y-2">
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/">About Us</Link></li>
-                        <li><Link href="/">Download Form</Link></li>
+                        <li><Link href="/form">Download Form</Link></li>
                         <li><Link href="/">Services</Link></li>
                         <li><Link href="/">Contact</Link></li>
                     </ul>
@@ -42,12 +42,12 @@ const Footer = () => {
                 <div className="text-white ">
                     <h2 className="font-semibold text-2xl">Gallery</h2>
                     <div className="pt-5 grid grid-cols-3 gap-1.5">
-                        <Image src={school1} className="h-16 rounded-lg object-cover" />
-                        <Image src={school2} className="h-16 rounded-lg object-cover" />
-                        <Image src={school3} className="h-16 rounded-lg object-cover" />
-                        <Image src={school4} className="h-16 rounded-lg object-cover" />
-                        <Image src={school5} className="h-16 rounded-lg object-cover" />
-                        <Image src={school6} className="h-16 rounded-lg object-cover" />
+                        <Image src={school1} alt="img" className="h-16 rounded-lg object-cover" />
+                        <Image src={school2} alt="img" className="h-16 rounded-lg object-cover" />
+                        <Image src={school3} alt="img" className="h-16 rounded-lg object-cover" />
+                        <Image src={school4} alt="img" className="h-16 rounded-lg object-cover" />
+                        <Image src={school5} alt="img" className="h-16 rounded-lg object-cover" />
+                        <Image src={school6} alt="img" className="h-16 rounded-lg object-cover" />
                     </div>
                 </div>
                 <div className="text-white lg:pl-5">

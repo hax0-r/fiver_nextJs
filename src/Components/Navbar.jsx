@@ -22,7 +22,7 @@ const Navbar = () => {
                     <ul className='md:flex hidden items-center gap-7 text-zinc-700 uppercase font-medium'>
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">Home</Link></li>/
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">About Us</Link></li>/
-                        <li><Link className='transition-all duration-500 hover:text-black' href="/">Download Form</Link></li>/
+                        <li><Link className='transition-all duration-500 hover:text-black' href="/form">Download Form</Link></li>/
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">Services</Link></li>/
                         <li><Link className='transition-all duration-500 hover:text-black' href="/">Contact</Link></li>
                     </ul>

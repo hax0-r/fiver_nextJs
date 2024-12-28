@@ -104,7 +104,7 @@ export default function Home() {
           Here are the common FAQs</p>
         <div className="max-w-7xl w-full mx-auto md:mt-14 mt-8 grid md:grid-cols-2 z-10 relative grid-cols-1 px-4 justify-center">
           <div className="">
-            <Image src={faq} className="w-full " />
+            <Image src={faq} alt="img" className="w-full " />
           </div>
           <div className=" bg-white h-full flex items-center justify-center">
             <Faq />
