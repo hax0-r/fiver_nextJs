@@ -26,11 +26,6 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  --black-color: #1e1c1c;
-  --white-color: #f7f7f7;
-}
-
 img, button, iframe, a {
   user-select: none;
 }
@@ -50,28 +45,8 @@ img, button, iframe, a {
   }
 }
 
-.navUnderLine {
-  position: relative;
-  padding: 0 2px;
-  cursor: pointer;
-}
-
-.navUnderLine::before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #dd572d;
-  transition: 200ms all;
-}
-.navUnderLine:hover::before {
-  width: 100%;
-}
-
 .fadeIn {
-  animation: fadeIn 1s;
+  animation: fadeIn 0.5s;
 }
 
 @keyframes fadeIn {
@@ -83,19 +58,30 @@ img, button, iframe, a {
   }
 }
 
-.fastFadeIn {
-  animation: fadeIn 0.5s;
-}
-
-@keyframes fastFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .myShadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bgContactSection{
+  background: linear-gradient(#0a364f,#0a364f),url(../../public/Assets/Home/slider1.jpg) center/cover no-repeat;
+  background-attachment: fixed;
 }
