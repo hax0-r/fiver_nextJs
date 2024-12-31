@@ -1,16 +1,16 @@
-import Card from "@/Components/Card";
-import Header from "@/Components/Header";
-import Navbar from "@/Components/Navbar";
-import SchoolView from "@/Components/SchoolView";
-import Slider from "@/Components/Slider";
+import Card from "../Components/Card";
+import Header from "../Components/Header";
+import Navbar from "../Components/Navbar";
+import SchoolView from "../Components/SchoolView";
+import Slider from "../Components/Slider";
 import bgBlue from "../../public/Assets/Home/bgBlue.jpg";
 import bgContact from "../../public/Assets/Home/slider1.jpg";
 import faq from "../../public/Assets/Home/faq.jpg";
-import { CARD_DATA, wyChooseUs } from "@/Data/CARD_DATA";
-import ScrollToTop from "@/Components/ScrollToTop";
-import Footer from "@/Components/Footer";
+import { CARD_DATA, wyChooseUs } from "../Data/CARD_DATA";
+import ScrollToTop from "../Components/ScrollToTop";
+import Footer from "../Components/Footer";
 import Image from "next/image";
-import Faq from "@/Components/Faq";
+import Faq from "../Components/Faq";
 
 
 export default function Home() {
