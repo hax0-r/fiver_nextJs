@@ -3,9 +3,11 @@ import Image from "next/image"
 import school1 from "../../../public/Assets/Home/school1.jpg"
 import logo from '../../../public/Assets/logo.jpg'
 import Link from "next/link"
+import Label from "../../Components/Label"
+import Input from "../../Components/Input"
 
 const Form = () => {
-    const handleSubmit  = async (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
 
@@ -39,14 +41,14 @@ const Form = () => {
                 </Link>
                 <h2 className="text-white text-center mt-6 font-semibold md:text-2xl text-xl">Download Form</h2>
 
-                <label className="text-white mt-4 block font-medium tracking-wide uppercase">Name</label>
-                <input type="text" name="name" className="w-full p-3.5 mt-1 rounded-lg focus:border-zinc-600 border" required placeholder="Enter Your Name" />
+                <Label name="name" />
+                <Input type="text" name="name" />
 
-                <label className="text-white mt-6 block font-medium tracking-wide uppercase">Email</label>
-                <input type="email" name="email" className="w-full p-3.5 mt-1 rounded-lg focus:border-zinc-600 border" required placeholder="Enter Your Email" />
+                <Label name="email" />
+                <Input type="email" name="email" />
 
-                <label className="text-white mt-6 block font-medium tracking-wide uppercase">Phone</label>
-                <input type="number" name="phone" className="w-full p-3.5 mt-1 rounded-lg focus:border-zinc-600 border" required placeholder="Enter Your Phone" />
+                <Label name="phone" />
+                <Input type="number" name="phone" />
 
                 <button className="hover:bg-[#0056b3] w-full mt-6 font-medium px-10 py-4 cursor-pointer transition-all duration-500 bg-[#007bff] text-white   rounded-lg ">Download and Submit</button>
             </form>
