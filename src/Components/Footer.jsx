@@ -42,12 +42,17 @@ const Footer = () => {
                 <div className="text-white ">
                     <h2 className="font-semibold text-2xl">Gallery</h2>
                     <div className="pt-5 grid grid-cols-3 gap-1.5">
-                        <Image src={school1} alt="img" className="h-16 rounded-lg object-cover" />
+                        {
+                            [1, 2, 3, 4, 5, 6].map((_, index) => (
+                                <Image width={100} src={`school${index + 1}`} alt="img" key={index} className="h-16 rounded-lg object-cover" />
+                            ))
+                        }
+                        {/* <Image src={school1} alt="img" className="h-16 rounded-lg object-cover" />
                         <Image src={school2} alt="img" className="h-16 rounded-lg object-cover" />
                         <Image src={school3} alt="img" className="h-16 rounded-lg object-cover" />
                         <Image src={school4} alt="img" className="h-16 rounded-lg object-cover" />
                         <Image src={school5} alt="img" className="h-16 rounded-lg object-cover" />
-                        <Image src={school6} alt="img" className="h-16 rounded-lg object-cover" />
+                        <Image src={school6} alt="img" className="h-16 rounded-lg object-cover" /> */}
                     </div>
                 </div>
                 <div className="text-white lg:pl-5">
